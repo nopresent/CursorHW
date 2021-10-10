@@ -127,6 +127,7 @@ abstract class LibraryVisitors implements LibraryReport {
         }
 
         System.out.println(arrayListOut);
+
     }
 
 }

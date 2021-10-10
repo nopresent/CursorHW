@@ -12,6 +12,7 @@ public class Main {
         // Выдали ему книги
         visitor.tookAbook(LocalDate.of(2021, 10, 15), "Book 4");
         visitor.tookAbook(LocalDate.of(2021, 10, 1), "Book 2");
+        visitor.tookAbook(LocalDate.of(2021, 10, 3), "Book 6");
         visitor.tookAbook(LocalDate.of(2021, 10, 15), "Book 5");
         visitor.tookAbook(LocalDate.of(2021, 10, 12), "Book 3");
         visitor.tookAbook(LocalDate.of(2021, 9, 29), "Book 1");
