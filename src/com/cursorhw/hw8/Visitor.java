@@ -29,9 +29,7 @@ abstract class LibraryVisitors implements LibraryReport {
     private TreeMap<HashMap<String, Integer>, String> report = new TreeMap<>(new Comparator<HashMap<String, Integer>>() {
         @Override
         public int compare(HashMap<String, Integer> o1, HashMap<String, Integer> o2) {
-            LocalDate time1 = LocalDate.of(o1.get("y"), o1.get("m"), o1.get("d"));
-            LocalDate time2 = LocalDate.of(o2.get("y"), o2.get("m"), o2.get("d"));
-            return time1.compareTo(time2);
+            return hashToLocalDate(o1).compareTo(hashToLocalDate(o2));
         }
     });
 
@@ -82,13 +80,13 @@ abstract class LibraryVisitors implements LibraryReport {
             dEnd = time1;
         }
 
-        while (!dStart.equals(dEnd)) {
-            dStart = dStart.plusDays(1);
+        while (!dStart.equals(dEnd.plusDays(1))) {
             String bookTitle = searchTitleByDate(dStart);
             if (searchTitleByDate(dStart) == noBook) {
                 bookTitle = "0";
             }
             System.out.println(dStart + " - " + bookTitle);
+            dStart = dStart.plusDays(1);
         }
     }
 

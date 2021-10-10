@@ -19,7 +19,7 @@ public class Main {
         System.out.println(visitor.getReport());
         System.out.println("******");
 
-        System.out.println("2. Сегодня книгу посетитель не брал");
+        System.out.println("2. Сегодня "+LocalDate.now()+" книгу посетитель не брал");
         System.out.println(visitor.searchTitleByDate(LocalDate.now()));
         System.out.println("******");
 
