@@ -39,11 +39,9 @@ public class testMyList {
         System.out.println("Напечатали массив");
         System.out.println(list.toString());
 
-
-//        System.out.print("Чистим массив");
-//        list.clear();
-//        System.out.println(list.toString());
-
+        System.out.print("Чистим массив");
+        list.clear();
+        System.out.println(list.toString());
 
     }
 
