@@ -125,9 +125,7 @@ abstract class LibraryVisitors implements LibraryReport {
             ArrayList<String> arrayListIn = (ArrayList<String>) entry.getValue();
             arrayListOut.addAll(arrayListIn);
         }
-
         System.out.println(arrayListOut);
-
     }
 
 }
